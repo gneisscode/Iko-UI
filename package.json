@@ -1,12 +1,14 @@
 {
   "name": "iko-ui",
   "private": false,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
-  "main": "dist/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsup",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -40,6 +42,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.4.2",
+    "tsup": "^7.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
