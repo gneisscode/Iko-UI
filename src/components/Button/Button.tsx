@@ -1,21 +1,38 @@
 import "../../index.css";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
+import Spinner from "./Spinner";
 
 export type ButtonVariantProps = VariantProps<typeof ButtonVariants>;
 export interface ButtonProps extends ButtonVariantProps {
-  label: string;
+  children: JSX.Element | React.ReactNode;
   className?: string;
+  ariaLabel?: string;
+  ariaDescribedBy?: string;
+  type?: "button" | "reset" | "submit";
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  loading?: boolean;
+  loadingIcon: JSX.Element | React.ReactNode
 }
 
 const ButtonVariants = cva(
-  "h-fit text-white uppercase transition-colors duration-150",
+  "h-fit w-[100%] transition-colors ease-linear delay-150",
   {
     variants: {
       intent: {
-        primary: "bg-green-500 hover:bg-green-600",
-        secondary: "bg-red-500 hover:bg-red-600",
-        default: "bg-gray-500 hover:bg-gray-600",
+        primary: "primary",
+        secondary: "secondary",
+        tertiary: "tertiary",
+      },
+
+      style: {
+        filled: "bg-teal-primary hover:bg-teal-hover",
+        outlined: "border border-teal-primary hover:bg-teal-primary",
+      },
+
+      disabled: {
+        true: "opacity-50 cursor-not-allowed",
+        false: "",
       },
 
       size: {
@@ -32,7 +49,7 @@ const ButtonVariants = cva(
     },
 
     defaultVariants: {
-      intent: "default",
+      intent: "primary",
       size: "medium",
       roundness: "round",
     },
@@ -40,19 +57,35 @@ const ButtonVariants = cva(
 );
 
 export default function Button({
+  children,
   intent,
   size,
   roundness,
-  label,
+  style,
   className,
+  disabled,
+  ariaLabel,
+  ariaDescribedBy,
+  type="button",
+  onClick,
+  loading,
+
 }: ButtonProps) {
   return (
     <button
+      onClick={onClick}
+      disabled={loading}
+      type={type}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
       className={`${twMerge(
-        ButtonVariants({ intent, size, roundness })
-      )} ${className}`}
+        ButtonVariants({ intent, size, roundness, style, disabled })
+      )} ${className} justify-center items-center gap-1 flex`}
     >
-      {label}
+      {loading && (
+          <Spinner  />
+      )}
+      {children}
     </button>
   );
 }

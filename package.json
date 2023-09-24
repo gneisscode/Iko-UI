@@ -1,7 +1,7 @@
 {
   "name": "iko-ui",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -25,10 +25,12 @@
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.2",
-    "@storybook/addon-interactions": "^7.4.2",
+    "@storybook/addon-a11y": "^7.4.4",
+    "@storybook/addon-interactions": "^7.4.4",
     "@storybook/addon-links": "^7.4.2",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.4.2",
+    "@storybook/jest": "^0.2.2",
     "@storybook/react": "^7.4.2",
     "@storybook/react-vite": "^7.4.2",
     "@storybook/testing-library": "^0.2.1",
@@ -46,7 +48,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "description": "an accessible ui component library for iko-ui",
+  "description": "an accessible ui component library for Iko Africa",
   "repository": "git@github.com:gneisscode/Iko-UI.git",
   "author": "gneisscode <103408439+gneisscode@users.noreply.github.com>",
   "license": "MIT"

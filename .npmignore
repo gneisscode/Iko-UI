@@ -42,8 +42,10 @@ dist/assets
 dist/main.tsx
 index.html
 vite-env.d.ts
+*.stories.tsx
 *.stories.ts
-*.config.ts
+tsup.config.ts
+vite.config.ts
 .eslintrc.cjs
 tsconfig.json
 package-lock.json
