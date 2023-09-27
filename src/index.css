@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.ripple-bg-gray-300 {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple-bg-gray-300:hover {
+    background: #c1cad6 radial-gradient(circle, transparent 1%, #c1cad6 1%) center/15000%;
+}
+
+.ripple-bg-gray-300:active {
+    background-color: #e2e8f0;
+    background-size: 100%;
+    transition: background 0s;
+}

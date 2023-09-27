@@ -23,6 +23,9 @@ export default {
 
         "system-disabled": "#CDCDCD",
         "system-alert": "#F86B6B",
+        "system-success": "#45D483",
+        "system-success-hover": "#17C964",
+        "system-error-hover": "#DD6161",
       },
     },
   },

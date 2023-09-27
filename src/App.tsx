@@ -8,14 +8,7 @@ function App() {
     <>
       <div>Hello World</div>
       <div className=" w-[200px]">
-        <Button
-          label="test"
-          size={"medium"}
-          roundness={"pill"}
-          intent={"primary"}
-          variant={"filled"}
-          className=""
-        />
+       
       </div>
     </>
   );

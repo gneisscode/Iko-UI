@@ -42,6 +42,26 @@ export const Secondary: Story = {
   },
 };
 
+export const SpringAnimated: Story = {
+  args: {
+    children: "default filled btn",
+    style: "filled",
+    intent: "primary",
+    spring: true,
+  },
+};
+
+export const RippleAnimated: Story = {
+  args: {
+    children: "custom filled btn",
+    className: "bg-teal-primary hover:bg-teal-hover ",
+    intent: "primary",
+    ripple: true,
+    spring: true,
+  },
+};
+
+
 export const Pill: Story = {
   args: {
     children: "custom sm pill",
@@ -62,7 +82,7 @@ export const Square: Story = {
   },
 };
 
-export const Rounded: Story = {
+export const CustomRounded: Story = {
   args: {
     children: "custom lg round btn",
     intent: "tertiary",
@@ -136,6 +156,26 @@ export const Disabled: Story = {
      disabled:true
   }
 }
+
+export const Danger: Story = {
+  args: {
+    children: "custom md pill",
+    intent: "tertiary",
+    roundness: "pill",
+    size:"medium",
+    style:"danger"
+  },
+};
+
+export const Success: Story = {
+  args: {
+    children: "custom md pill",
+    intent: "tertiary",
+    roundness: "pill",
+    size:"medium",
+    style: "success",
+  },
+};
 
 export const ClickExample: Story = {
   args:{
