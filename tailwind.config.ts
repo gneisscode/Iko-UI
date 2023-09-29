@@ -23,6 +23,7 @@ export default {
 
         "system-disabled": "#CDCDCD",
         "system-alert": "#F86B6B",
+        "system-field": "#F8F8F8",
         "system-success": "#45D483",
         "system-success-hover": "#17C964",
         "system-error-hover": "#DD6161",

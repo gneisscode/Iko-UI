@@ -1,7 +1,7 @@
 import "../../index.css";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
-import Spinner from "./Spinner";
+import { Spinner } from "../../icons";
 import { ScaleX } from "../../animations";
 
 export type ButtonVariantProps = VariantProps<typeof ButtonVariants>;
@@ -17,7 +17,7 @@ export interface ButtonProps extends ButtonVariantProps {
 }
 
 const ButtonVariants = cva(
-  "h-fit w-[100%] transition-colors ease-linear delay-150 transform bg-teal-primary",
+  "h-fit w-[100%] transition-colors ease-linear delay-150 transform bg-teal-primary hover:bg-teal-hover",
   {
     variants: {
       intent: {
@@ -35,7 +35,7 @@ const ButtonVariants = cva(
         filled:
           "bg-teal-primary border-[2.5px] border-teal-primary hover:border-teal-hover hover:bg-teal-hover active:bg-background-neutral active:text-text-secondary active:border-black",
         outlined:
-          "border-[2.5px] bg-white border-teal-primary hover:border-teal-hover active:bg-background-neutral active:text-text-secondary active:border-black",
+          "border-[2.5px] bg-white hover:bg-white border-teal-primary hover:border-teal-hover active:bg-background-neutral active:text-text-secondary active:border-black",
 
         danger: "bg-system-alert hover:bg-system-error-hover",
         success: " bg-system-success hover:bg-system-success-hover"
@@ -63,7 +63,6 @@ const ButtonVariants = cva(
       intent: "primary",
       size: "medium",
       roundness: "round",
-      style: "filled",
     },
   }
 );

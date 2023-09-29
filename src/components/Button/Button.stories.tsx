@@ -68,7 +68,7 @@ export const Pill: Story = {
     intent: "primary",
     roundness: "pill",
     size: "small",
-    className: "border border-[#abd1c6] hover:bg-[#abd1c6]",
+    className: "bg-white border border-[#abd1c6] hover:bg-[#abd1c6]",
   },
 };
 
@@ -78,7 +78,7 @@ export const Square: Story = {
     intent: "primary",
     roundness: "square",
     size: "medium",
-    className: "bg-[#abd1c6] hover:bg-[#98d1c1] ",
+    className: "bg-[#abd1c6] hover:bg-[#98d1c1] border-[#abd1c6] ",
   },
 };
 
@@ -88,7 +88,7 @@ export const CustomRounded: Story = {
     intent: "tertiary",
     roundness: "round",
     size: "large",
-    className: "bg-[#abd1c6] hover:bg-[#98d1c1] ",
+    className: "bg-[#abd1c6] hover:bg-[#98d1c1] border-[#abd1c6]",
   },
 };
 
@@ -138,7 +138,8 @@ export const IconButton: Story = {
         />
       </svg>
     ),
-    className: "hover:scale-150 transition-all ease-linear delay-75"
+    className: "transition-all ease-linear delay-75",
+    spring: true
   },
 };
 
