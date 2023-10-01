@@ -22,7 +22,7 @@ const ToastVariants = cva("", {
       neutral: " bg-gray-400", //examples to guide, defs switch these up ...
     },
 
-    //add other variants here if necessary e.g. size, roundness, etc, see other components like button for examples..
+    //add other variants here if necessary e.g. position, size, roundness, etc, see other components like button for examples..
   },
 
   defaultVariants: {
