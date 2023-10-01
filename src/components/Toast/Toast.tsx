@@ -1,12 +1,15 @@
 import "../../index.css";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
+import { useToastRegion, useToast } from "@react-aria/toast";
+
 
 export type ToastVariantProps = VariantProps<typeof ToastVariants>;
 
 export interface ToastProps extends ToastVariantProps {
  //whatever other style-unrelated proptypes that you need for the toast go in here
  children: JSX.Element | React.ReactNode;
+ className: string;
 }
 
 
@@ -27,10 +30,10 @@ const ToastVariants = cva("", {
   },
 });
 
-export default function Toast({children, intent}: ToastProps) {
+export default function Toast({children, intent, className}: ToastProps) {
 
     return(
-        <div className={` ${twMerge(ToastVariants({intent}), "rest of your classes if necessary w-[100%]")}`}>
+        <div className={` ${twMerge(ToastVariants({intent, className}), "rest of your classes if necessary w-[100%]")}`}>
           {children}
         </div>
     )
